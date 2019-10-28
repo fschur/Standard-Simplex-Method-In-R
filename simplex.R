@@ -1,10 +1,11 @@
 #Simplex method for solving Linear Programms in Standard Equality Form.
 #Input: A,b,c defining the Linear Programming problem in standrt equality form,
 # x,B: x a basic feasible solution determined by the basis B.
-# Output: x', B' an optimal basic feasible solution.
+# Output: If there exists an optimal solution: x', B' an optimal basic feasible solution.
+# If the LP is unbounded: x,d such that x+ad for a in R+ is a certificate.
 # Note: The smallest subscript rule is used and the method in this form can not handel degenerate solutions.
 
-# number of decimal places. Choose round_coef higher for small values and more accuracy 
+# number of decimal places. Increase round_coef for more accuracy.
 round_coef = 10
 
 simplex <- function(A,b,c,x,B){
