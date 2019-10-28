@@ -1,7 +1,7 @@
 #Simplex method for solving Linear Programms in Standard Equality Form.
-#Input: A,b,c defining the Linear Programming problem in standrt equality form,
-# x,B: x a basic feasible solution determined by the basis B.
-# Output: If there exists an optimal solution: x', B' an optimal basic feasible solution.
+#Input: A,b,c defining the Linear Programming problem in standard equality form (max c^Tx; Ax = b, X >= 0)
+# x,B: x is a basic feasible solution determined by the basis B.
+# Output: If there exists an optimal solution: returns an optimal basic feasible x' solution with basis B'.
 # If the LP is unbounded: x,d such that x+ad for a in R+ is a certificate.
 # Note: The smallest subscript rule is used and the method in this form can not handel degenerate solutions.
 
