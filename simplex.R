@@ -26,7 +26,7 @@ simplex <- function(A,b,c,x,B){
   d_hat[k] = 1
   
   # if all entries in d are smaller equal 0, then the Linear Programming Problem is unbounded
-  if (sum(round(d_hat, round_coef) < rep(0,n)) == 0){return(list("unbounded", x, d))}
+  if (sum(round(d_hat, round_coef) < rep(0,n)) == 0){return(list("unbounded", x, d_hat))}
   
   tem = x[B]/d
   idx = which(d > 0)
