@@ -12,6 +12,7 @@ simplex <- function(A,b,c,x,B){
   n = length(c)
   y = solve(t(A[,B]), c[B])
   s = c - t(y)%*%A
+  
   # if all entries in s are smaller equal 0, we found an optimal solution.
   if (sum(round(s, round_coef) > rep(0, n)) == 0){return(list("optimal", x, y))
   } else{
@@ -36,13 +37,15 @@ simplex <- function(A,b,c,x,B){
   B_new = sort(setdiff(union(B, k), min_idx))
   return(list("new bfs", x_new, B_new))
 }
-
+ 
+# Example LP
 vec = c(1,1,1,1,2,1,1,2,2,1,2,1,2,2,1,1,2,1,4,-1,2,1,-2,4,2,1,0,0)
 A = matrix(vec, nrow=4)
 b = c(7,5,5,5)
 c = c(1,2,2,2,6,4,-4)
 x = c(1,1,1,1,0,0,0)
 B = c(1,2,3,4)
+
 
 repeat{
   output = simplex(A,b,c,x,B)
