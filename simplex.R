@@ -1,4 +1,4 @@
-#Simplex method for solving Linear Programms in Standard Equality Form.
+#Simplex method for solving Linear Programming problems in Standard Equality Form.
 #Input: A,b,c defining the Linear Programming problem in standard equality form (max c^Tx; Ax = b, X >= 0)
 # x,B: x is a basic feasible solution determined by the basis B.
 # Output: If there exists an optimal solution: returns an optimal basic feasible x' solution with basis B'.
