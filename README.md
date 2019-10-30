@@ -1,2 +1,2 @@
 # Standard Simplex Method
-Implementation of the Standard Simplex Method in R for standard equality form.
+Implementation of the Standard Simplex Method for standard equality form in R.
