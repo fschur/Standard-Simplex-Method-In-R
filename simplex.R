@@ -3,7 +3,7 @@
 # x,B: x is a basic feasible solution determined by the basis B.
 # Output: If there exists an optimal solution: returns an optimal basic feasible x' solution with basis B'.
 # If the LP is unbounded: x,d such that x+ad for a in R+ is a certificate.
-# Note: The smallest subscript rule is used and the method in this form can not handel degenerate solutions.
+# Note: The smallest subscript rule is used.
 
 # number of decimal places. Increase round_coef for more accuracy.
 round_coef = 10
